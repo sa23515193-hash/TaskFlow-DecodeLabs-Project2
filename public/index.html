@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TaskFlow — DecodeLabs Project 2 Backend API demonstration" />
+  <title>TaskFlow | DecodeLabs API</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="navbar"><div class="container nav-inner"><a class="brand" href="#home">Task<span>Flow</span></a><nav><a href="#home">Home</a><a href="#api">API</a><a href="#tasks">Tasks</a><a href="#about">About</a></nav></div></header>
+  <main>
+    <section id="home" class="hero"><div class="container hero-grid"><div><p class="eyebrow">DECODELABS · PROJECT 2</p><h1>Backend API.<br><span>Built clearly.</span></h1><p class="hero-text">A professional demonstration of REST API development, request handling, validation, JSON responses and frontend-to-backend communication.</p><div class="actions"><a class="btn primary" href="#tasks">Open Task Manager</a><a class="btn ghost" href="#api">Explore API</a></div></div><div class="hero-card"><div class="status"><i></i> API architecture</div><div class="terminal"><p><span>$</span> GET /api/tasks</p><p class="success">200 OK</p><p>{ "success": true,</p><p>&nbsp; "count": 3 }</p><p><span>$</span> POST /api/tasks</p><p class="success">201 Created</p></div></div></div></section>
+    <section id="api" class="section"><div class="container"><div class="section-head"><div><p class="eyebrow">CORE REQUIREMENTS</p><h2>Simple API, proper structure.</h2></div><p>Designed around the exact Project 2 learning objectives.</p></div><div class="feature-grid"><article><b>01</b><h3>GET endpoints</h3><p>Retrieve all tasks or one task by ID with JSON responses.</p></article><article><b>02</b><h3>POST endpoint</h3><p>Create a new task from validated user input.</p></article><article><b>03</b><h3>Validation</h3><p>Required fields, length limits and allowed status values are checked.</p></article><article><b>04</b><h3>Status codes</h3><p>Uses meaningful 200, 201, 400, 404 and 500 responses.</p></article></div></div></section>
+    <section id="tasks" class="section tasks-section"><div class="container two-col"><div><p class="eyebrow">LIVE DEMO</p><h2>Task manager</h2><p class="muted">When running locally, this interface communicates with the Express API. On GitHub Pages, it automatically uses browser storage so the static page remains functional.</p><div id="api-status" class="api-pill">Checking API…</div><form id="task-form"><label>Task title<input id="title" name="title" type="text" maxlength="100" placeholder="e.g. Build REST API" required /></label><label>Description<textarea id="description" name="description" maxlength="500" placeholder="What needs to be completed?"></textarea></label><label>Status<select id="status" name="status"><option value="pending">Pending</option><option value="in-progress">In progress</option><option value="completed">Completed</option></select></label><button class="btn primary" type="submit">Create task</button><p id="form-message" class="form-message"></p></form></div><div><div class="tasks-header"><h3>Tasks</h3><button id="refresh" class="text-btn" type="button">Refresh</button></div><div id="task-list" class="task-list"><div class="loading">Loading tasks…</div></div></div></div></section>
+    <section id="about" class="section about"><div class="container"><p class="eyebrow">PROJECT NOTES</p><h2>From request to response.</h2><p>This project demonstrates the complete flow: a user submits data → the frontend sends JSON → Express receives the request → validation runs → the controller processes the data → the API returns a structured response → the interface updates.</p></div></section>
+  </main>
+  <footer><div class="container footer-inner"><span>TaskFlow API · DecodeLabs Project 2</span><span>Full Stack Development</span></div></footer>
+  <script src="app.js"></script>
+</body>
+</html>
